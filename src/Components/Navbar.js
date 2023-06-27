@@ -1,6 +1,7 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { SiShopware } from "react-icons/si";
-import { BiShoppingBag, BiPyramid } from "react-icons/bi";
+import avatar from "../data/avatar.jpg";
+import { BiShoppingBag, BiPyramid, BiMessageRounded } from "react-icons/bi";
 import { MdOutlineCandlestickChart, MdStackedLineChart } from "react-icons/md";
 import {
   BsCart3,
@@ -18,29 +19,30 @@ import {
   AiOutlineAreaChart,
   AiFillPieChart,
   AiOutlineMenu,
+  AiOutlineBell,
 } from "react-icons/ai";
 
 export default function Navbar() {
+  useEffect(() => {
+    // Initialize tooltips
+    const tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+  }, []);
   return (
     <>
       <div className="container-fluid">
-        <div className="">
-          <a
-            className=""
-            data-bs-toggle="offcanvas"
-            href="#offcanvasExample"
-            role=""
-            aria-controls="offcanvasExample"
-          >
-            <AiOutlineMenu />
-          </a>
-        </div>
         <div
           className="offcanvas offcanvas-start"
           tabindex="-1"
           id="offcanvasExample"
           aria-labelledby="offcanvasExampleLabel"
           style={{ width: "21rem" }}
+          data-bs-scroll="true"
+          data-bs-backdrop="false"
         >
           <div className="offcanvas-header">
             <div className="row">
@@ -138,6 +140,52 @@ export default function Navbar() {
               <p>Stacked</p>
             </div>
           </div>
+        </div>
+        <div className="d-flex justify-content-between mt-2">
+          <a
+            className=""
+            data-bs-toggle="offcanvas"
+            href="#offcanvasExample"
+            aria-controls="offcanvasExample"
+          >
+            <AiOutlineMenu className="" />
+          </a>
+<div className="d-flex gap-3">
+      <div
+        data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        title="Cart"
+        style={{ height: "30px" }}
+        
+      >
+        <BsCart3  />
+      </div>
+      <div
+        data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        title="Message"
+      >
+        <BiMessageRounded className="" />
+      </div>
+      <div
+        data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        title="Notification"
+        
+      >
+        <AiOutlineBell className="" />
+      </div>
+      <button type="button" className="d-flex btn button-navbar " style={{width:'8.5rem',height:'2.5rem'}} data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        title="Profile">
+      <img
+        src={avatar}
+        className="rounded-circle "
+        style={{ width: "25px" }}
+        alt="Avatar"
+      /><p className="text-secondary ">Hi, Michael</p>
+      </button>
+    </div>
         </div>
       </div>
     </>

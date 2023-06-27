@@ -1,9 +1,18 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  
 }
 .button-offcanvas:hover {
   background-color: rgb(231, 227, 227);
   border-radius: 5px;
   width: 15rem;
 }
+.button-navbar{
+  background-color: rgb(250,251,251);
+}
+.button-navbar:hover{
+  background-color: #e2e3e5;
+}
+
+
