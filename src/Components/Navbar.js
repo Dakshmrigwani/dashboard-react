@@ -23,10 +23,10 @@ export default function Navbar() {
   return (
     <>
       <div className="container-fluid">
-        <div className="filter-section scrollbar-primary">
+        <div className="">
           <div
             className="offcanvas offcanvas-start show"
-            tabIndex="-1"
+            tabindex="-1"
             id="offcanvasDark"
             aria-labelledby="offcanvasDarkLabel"
           >
@@ -36,7 +36,7 @@ export default function Navbar() {
                   <SiShopware />
                 </div>
                 <div className="col text-start w-100">
-                  <h5 className="offcanvas-title" id="offcanvasDarkLabel">
+                  <h5 className="offcanvas-title " id="offcanvasDarkLabel">
                     Dashbordo
                   </h5>
                 </div>
