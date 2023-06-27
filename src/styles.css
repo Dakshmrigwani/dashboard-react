@@ -2,3 +2,6 @@
   font-family: sans-serif;
   text-align: center;
 }
+.button-offcanvas:hover{
+  background-color: lightgray;
+}
