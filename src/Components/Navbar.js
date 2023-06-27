@@ -17,18 +17,30 @@ import {
   AiOutlineLineChart,
   AiOutlineAreaChart,
   AiFillPieChart,
+  AiOutlineMenu,
 } from "react-icons/ai";
 
 export default function Navbar() {
   return (
     <>
       <div className="container-fluid">
-        <div className=""></div>
+        <div className="">
+          <a
+            className=""
+            data-bs-toggle="offcanvas"
+            href="#offcanvasExample"
+            role=""
+            aria-controls="offcanvasExample"
+          >
+            <AiOutlineMenu />
+          </a>
+        </div>
         <div
-          className="offcanvas offcanvas-start show"
+          className="offcanvas offcanvas-start"
           tabindex="-1"
-          id="offcanvasDark"
-          aria-labelledby="offcanvasDarkLabel"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+          style={{ width: "21rem" }}
         >
           <div className="offcanvas-header">
             <div className="row">
@@ -43,8 +55,8 @@ export default function Navbar() {
             </div>
             <button
               type="button"
-              className="btn-close btn-close-dark"
-              data-bs-dismiss="offcanvasDark"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
           </div>
@@ -52,76 +64,76 @@ export default function Navbar() {
             <div className="text-secondary text-start">
               <h5>DASHBOARD</h5>
             </div>
-            <div className="d-flex gap-3 py-3 button-offcanvas">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <BiShoppingBag />
               <p>Ecommerce</p>
             </div>
             <div className="text-secondary text-start">
               <h5>Pages</h5>
             </div>
-            <div className="d-flex gap-3 pt-3">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <BsCart3 />
               <p>Orders</p>
             </div>
-            <div className="d-flex gap-3 pt-3">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <BsPeople />
               <p>Employees</p>
             </div>
-            <div className="d-flex gap-3 py-3">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <FcBusinessman />
               <p>Customer</p>
             </div>
             <div className="text-secondary text-start">
               <h5>APPS</h5>
             </div>
-            <div className="d-flex gap-3 pt-3">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <BsCalendarEvent />
               <p>Calendar</p>
             </div>
-            <div className="d-flex gap-3 pt-3">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <BsKanban />
               <p>Kanban</p>
             </div>
-            <div className="d-flex gap-3 pt-3">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <VscEditorLayout />
               <p>Editor</p>
             </div>
-            <div className="d-flex gap-3 pt-3">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <TbColorPicker />
               <p>Color picker</p>
             </div>
             <div className="text-secondary text-start">
               <h5>Charts</h5>
             </div>
-            <div className="d-flex gap-3 pt-3">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <AiOutlineLineChart />
               <p>Line</p>
             </div>
-            <div className="d-flex gap-3 pt-3">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <AiOutlineAreaChart />
               <p>Area</p>
             </div>
-            <div className="d-flex gap-3 pt-3">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <BsFillBarChartFill />
               <p>Bar</p>
             </div>
-            <div className="d-flex gap-3 pt-3">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <AiFillPieChart />
               <p>Pie</p>
             </div>
-            <div className="d-flex gap-3 pt-3">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <MdOutlineCandlestickChart />
               <p>Financial</p>
             </div>
-            <div className="d-flex gap-3 pt-3">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <BsBarChartLine />
               <p>Color Mapping</p>
             </div>
-            <div className="d-flex gap-3 pt-3">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <BiPyramid />
               <p>Pyramid</p>
             </div>
-            <div className="d-flex gap-3 pt-3">
+            <div className="d-flex gap-3 my-1 p-1 ps-3 pt-2 button-offcanvas">
               <MdStackedLineChart />
               <p>Stacked</p>
             </div>
