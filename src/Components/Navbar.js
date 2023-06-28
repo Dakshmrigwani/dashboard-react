@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
 import { SiShopware } from "react-icons/si";
 import avatar from "../data/avatar.jpg";
-import avatar2 from "../data/avatar2.jpg"
-// import avatar3 from "../data/avatar3.jpg"
-// import avatar4 from "../data/avatar4.jpg"
+import avatar2 from "../data/avatar2.jpg";
+import avatar3 from "../data/avatar3.png";
+import avatar4 from "../data/avatar4.jpg";
+import Product4 from "../data/product4.jpg";
+import Product5 from "../data/product5.jpg";
+import Product6 from "../data/product6.jpg";
+import Product7 from "../data/product7.jpg";
 
 import { BiShoppingBag, BiPyramid, BiMessageRounded } from "react-icons/bi";
 import { MdOutlineCandlestickChart, MdStackedLineChart } from "react-icons/md";
@@ -157,21 +161,57 @@ export default function Navbar() {
           </a>
           <div className="d-flex gap-3">
             <div
-              data-bs-toggle="tooltip"
-              data-bs-placement="bottom"
-              title="Cart"
-              style={{ height: "30px" }}
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"
             >
-              <BsCart3 size={20} />
+              <div
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Cart"
+                style={{ height: "30px" }}
+              >
+                <BsCart3 size={20} />
+              </div>
             </div>
-            <div data-bs-toggle="modal" data-bs-target="#exampleModal2" >
             <div
-              data-bs-toggle="tooltip"
-              data-bs-placement="bottom"
-              title="Message"
+              className="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="offcanvasRight"
+              aria-labelledby="offcanvasRightLabel"
             >
-              <BiMessageRounded className="" size={20} />
+              <div className="offcanvas-header">
+                <h5 className="offcanvas-title" id="offcanvasRightLabel">
+                  Shopping Cart
+                </h5>
+                <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div className="offcanvas-body">
+                <div className="">
+                  <div className="row">
+                    <div className="col">
+                      <img src={Product4} alt="" className="rounded-circle" style={{width:"30px"}} />
+                    </div>
+                    <div className="col">
+                      <b>Butter Scotch ice cream</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div data-bs-toggle="modal" data-bs-target="#exampleModal2">
+              <div
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Message"
+              >
+                <BiMessageRounded className="" size={20} />
+              </div>
             </div>
             <div
               className="modal "
@@ -182,7 +222,7 @@ export default function Navbar() {
               data-backdrop="false"
             >
               <div className="modal-dialog position-absolute end-0">
-                <div className="modal-content mt-4" style={{ width: "29rem" }}>
+                <div className="modal-content mt-4">
                   <div className="modal-header border-0">
                     <h1 className="modal-title fs-5" id="exampleModalLabel">
                       Messages
@@ -195,73 +235,99 @@ export default function Navbar() {
                     ></button>
                   </div>
                   <div className="modal-body ">
-                    
-                    <button className="d-flex gap-3 button-navbar w-100" style={{ border:'none',borderRadius:'5px' }}>
-                      
-                        <div className="d-flex gap-3 ">
-                      <div className="">
-                        <img
-                          src={avatar2}
-                          alt=""
-                          className="rounded-circle"
-                          style={{ width: "60px" }}
-                        />
-                      </div>
-                      <div className="text-start mt-2">
-                        <b className="fs-5">Michael Robert</b>
-                        
-                        <p
-                          className="text-secondary"
-                          
-                        >
-                          info@shop.com
-                        </p>
-                      </div>
-                    </div>
-                    </button>
-                    <hr />
-                    <button className="d-flex gap-3 button-navbar w-100" style={{ border:'none',borderRadius:'5px' }}>
-                      <button
-                        className="btn mt-2"
-                        type="button"
-                        style={{ backgroundColor: "#e5fafb",border:'none' }}
-                      >
-                        <BsCurrencyDollar style={{ color: "03C9D7" }} />
-                      </button>
-                      <div className="">
-                        <b className="text-start" style={{ fontSize: "20px" }}>My Inbox</b>
-                        <p className="text-secondary">Messages & Emails</p>
+                    <button
+                      className="d-flex gap-3 button-navbar w-100 py-2"
+                      style={{
+                        border: "none",
+                        borderRadius: "5px",
+                        margin: "-20px 0 -10px 0",
+                      }}
+                    >
+                      <div className="d-flex gap-3 ">
+                        <div className="">
+                          <img
+                            src={avatar2}
+                            alt=""
+                            className="rounded-circle"
+                            style={{ width: "60px" }}
+                          />
+                        </div>
+                        <div className="text-start mt-2">
+                          <b className="fs-5">Roman Joined the team</b>
+
+                          <p className="text-secondary">Congrats to him</p>
+                        </div>
                       </div>
                     </button>
                     <hr />
-                    <button className="d-flex button-navbar w-100 gap-3" style={{ border:'none',borderRadius:'5px' }}>
-                      <button
-                        className="btn mt-2"
-                        type="button"
-                        style={{ backgroundColor: "#fec90f",border:'none' }}
-                      >
-                        <BsCurrencyDollar style={{ color: "white" }} />
-                      </button>
-                      <div className="">
-                        <b className="text-start" style={{ fontSize: "20px" }}>My Tasks</b>
-                        <p className="text-secondary">Todo and daily Task</p>
+                    <button
+                      className="d-flex gap-3 button-navbar w-100 py-2"
+                      style={{
+                        border: "none",
+                        borderRadius: "5px",
+                        margin: "-20px 0 -10px 0",
+                      }}
+                    >
+                      <div className="d-flex gap-3 ">
+                        <div className="">
+                          <img
+                            src={avatar3}
+                            alt=""
+                            className="rounded-circle"
+                            style={{ width: "60px" }}
+                          />
+                        </div>
+                        <div className="text-start mt-2">
+                          <b className="fs-5">New Message Request</b>
+
+                          <p className="text-secondary">
+                            Salma sent you the new message
+                          </p>
+                        </div>
                       </div>
                     </button>
                     <hr />
-                    <button className="btn btn-primary w-100">Logout</button>
+                    <button
+                      className="d-flex gap-3 button-navbar w-100 py-2"
+                      style={{
+                        border: "none",
+                        borderRadius: "5px",
+                        margin: "-20px 0 -10px 0",
+                      }}
+                    >
+                      <div className="d-flex gap-3 ">
+                        <div className="">
+                          <img
+                            src={avatar4}
+                            alt=""
+                            className="rounded-circle"
+                            style={{ width: "60px" }}
+                          />
+                        </div>
+                        <div className="text-start mt-2">
+                          <b className="fs-5">New Payment Recieved</b>
+
+                          <p className="text-secondary">Check your earning</p>
+                        </div>
+                      </div>
+                    </button>
+                    <hr />
+                    <button className="btn btn-primary w-100">
+                      See all the messages
+                    </button>
                     <div className="modal-footer border-0"></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div data-bs-toggle="modal" data-bs-target="#exampleModal1" >
-            <div
-              data-bs-toggle="tooltip"
-              data-bs-placement="bottom"
-              title="Notification"
-            >
-              <AiOutlineBell className="" size={20} />
-            </div>
+            <div data-bs-toggle="modal" data-bs-target="#exampleModal1">
+              <div
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Notification"
+              >
+                <AiOutlineBell className="" size={20} />
+              </div>
             </div>
             <div
               className="modal "
@@ -272,10 +338,10 @@ export default function Navbar() {
               data-backdrop="false"
             >
               <div className="modal-dialog position-absolute end-0">
-                <div className="modal-content mt-4" style={{ width: "29rem" }}>
+                <div className="modal-content mt-4">
                   <div className="modal-header border-0">
                     <h1 className="modal-title fs-5" id="exampleModalLabel">
-                      User Profile
+                      Notification
                     </h1>
                     <button
                       type="button"
@@ -285,76 +351,92 @@ export default function Navbar() {
                     ></button>
                   </div>
                   <div className="modal-body ">
-                    <div className="d-flex gap-3 ">
-                      <div className="">
-                        <img
-                          src={avatar}
-                          alt=""
-                          className="rounded-circle"
-                          style={{ width: "100px" }}
-                        />
-                      </div>
-                      <div className="text-start mt-2">
-                        <b className="fs-5">Michael Robert</b>
-                        <p>Administrator</p>
-                        <p
-                          className="text-secondary"
-                          style={{ marginTop: "-1rem" }}
-                        >
-                          info@shop.com
-                        </p>
-                      </div>
-                    </div>
-                    <hr />
-                    <button className="d-flex gap-3 button-navbar w-100" style={{ border:'none',borderRadius:'5px' }}>
-                      <button
-                        className="btn mt-2"
-                        type="button"
-                        style={{ backgroundColor: "#e5fafb",border:'none' }}
-                      >
-                        <BsCurrencyDollar style={{ color: "03C9D7" }} />
-                      </button>
-                      <div className="">
-                        <b className="text-start" style={{ fontSize: "20px" }}>My Profile</b>
-                        <p className="text-secondary">Acccount Settings</p>
+                    <button
+                      className="d-flex gap-3 button-navbar w-100 py-2"
+                      style={{
+                        border: "none",
+                        borderRadius: "5px",
+                        margin: "-20px 0 -10px 0",
+                      }}
+                    >
+                      <div className="d-flex gap-3 ">
+                        <div className="">
+                          <img
+                            src={avatar2}
+                            alt=""
+                            className="rounded-circle"
+                            style={{ width: "60px" }}
+                          />
+                        </div>
+                        <div className="text-start mt-2">
+                          <b className="fs-5">Roman Joined the team</b>
+
+                          <p className="text-secondary">Congrats to him</p>
+                        </div>
                       </div>
                     </button>
                     <hr />
-                    <button className="d-flex gap-3 button-navbar w-100" style={{ border:'none',borderRadius:'5px' }}>
-                      <button
-                        className="btn mt-2"
-                        type="button"
-                        style={{ backgroundColor: "#e5fafb",border:'none' }}
-                      >
-                        <BsCurrencyDollar style={{ color: "03C9D7" }} />
-                      </button>
-                      <div className="">
-                        <b className="text-start" style={{ fontSize: "20px" }}>My Inbox</b>
-                        <p className="text-secondary">Messages & Emails</p>
+                    <button
+                      className="d-flex gap-3 button-navbar w-100 py-2"
+                      style={{
+                        border: "none",
+                        borderRadius: "5px",
+                        margin: "-20px 0 -10px 0",
+                      }}
+                    >
+                      <div className="d-flex gap-3 ">
+                        <div className="">
+                          <img
+                            src={avatar3}
+                            alt=""
+                            className="rounded-circle"
+                            style={{ width: "60px" }}
+                          />
+                        </div>
+                        <div className="text-start mt-2">
+                          <b className="fs-5">New Message Request</b>
+
+                          <p className="text-secondary">
+                            Salma sent you the new message
+                          </p>
+                        </div>
                       </div>
                     </button>
                     <hr />
-                    <button className="d-flex button-navbar w-100 gap-3" style={{ border:'none',borderRadius:'5px' }}>
-                      <button
-                        className="btn mt-2"
-                        type="button"
-                        style={{ backgroundColor: "#fec90f",border:'none' }}
-                      >
-                        <BsCurrencyDollar style={{ color: "white" }} />
-                      </button>
-                      <div className="">
-                        <b className="text-start" style={{ fontSize: "20px" }}>My Tasks</b>
-                        <p className="text-secondary">Todo and daily Task</p>
+                    <button
+                      className="d-flex gap-3 button-navbar w-100 py-2"
+                      style={{
+                        border: "none",
+                        borderRadius: "5px",
+                        margin: "-20px 0 -10px 0",
+                      }}
+                    >
+                      <div className="d-flex gap-3 ">
+                        <div className="">
+                          <img
+                            src={avatar4}
+                            alt=""
+                            className="rounded-circle"
+                            style={{ width: "60px" }}
+                          />
+                        </div>
+                        <div className="text-start mt-2">
+                          <b className="fs-5">New Payment Recieved</b>
+
+                          <p className="text-secondary">Check your earning</p>
+                        </div>
                       </div>
                     </button>
                     <hr />
-                    <button className="btn btn-primary w-100">Logout</button>
+                    <button className="btn btn-primary w-100">
+                      See all the Notification
+                    </button>
                     <div className="modal-footer border-0"></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div data-bs-toggle="modal" data-bs-target="#exampleModal" >
+            <div data-bs-toggle="modal" data-bs-target="#exampleModal">
               <button
                 type="button"
                 className="d-flex btn button-navbar "
@@ -415,44 +497,59 @@ export default function Navbar() {
                       </div>
                     </div>
                     <hr />
-                    <button className="d-flex gap-3 button-navbar w-100" style={{ border:'none',borderRadius:'5px' }}>
+                    <button
+                      className="d-flex gap-3 button-navbar w-100"
+                      style={{ border: "none", borderRadius: "5px" }}
+                    >
                       <button
                         className="btn mt-2"
                         type="button"
-                        style={{ backgroundColor: "#e5fafb",border:'none' }}
+                        style={{ backgroundColor: "#e5fafb", border: "none" }}
                       >
                         <BsCurrencyDollar style={{ color: "03C9D7" }} />
                       </button>
                       <div className="">
-                        <b className="text-start" style={{ fontSize: "20px" }}>My Profile</b>
+                        <b className="text-start" style={{ fontSize: "20px" }}>
+                          My Profile
+                        </b>
                         <p className="text-secondary">Acccount Settings</p>
                       </div>
                     </button>
                     <hr />
-                    <button className="d-flex gap-3 button-navbar w-100" style={{ border:'none',borderRadius:'5px' }}>
+                    <button
+                      className="d-flex gap-3 button-navbar w-100"
+                      style={{ border: "none", borderRadius: "5px" }}
+                    >
                       <button
                         className="btn mt-2"
                         type="button"
-                        style={{ backgroundColor: "#e5fafb",border:'none' }}
+                        style={{ backgroundColor: "#e5fafb", border: "none" }}
                       >
                         <BsCurrencyDollar style={{ color: "03C9D7" }} />
                       </button>
                       <div className="">
-                        <b className="text-start" style={{ fontSize: "20px" }}>My Inbox</b>
+                        <b className="text-start" style={{ fontSize: "20px" }}>
+                          My Inbox
+                        </b>
                         <p className="text-secondary">Messages & Emails</p>
                       </div>
                     </button>
                     <hr />
-                    <button className="d-flex button-navbar w-100 gap-3" style={{ border:'none',borderRadius:'5px' }}>
+                    <button
+                      className="d-flex button-navbar w-100 gap-3"
+                      style={{ border: "none", borderRadius: "5px" }}
+                    >
                       <button
                         className="btn mt-2"
                         type="button"
-                        style={{ backgroundColor: "#fec90f",border:'none' }}
+                        style={{ backgroundColor: "#fec90f", border: "none" }}
                       >
                         <BsCurrencyDollar style={{ color: "white" }} />
                       </button>
                       <div className="">
-                        <b className="text-start" style={{ fontSize: "20px" }}>My Tasks</b>
+                        <b className="text-start" style={{ fontSize: "20px" }}>
+                          My Tasks
+                        </b>
                         <p className="text-secondary">Todo and daily Task</p>
                       </div>
                     </button>
