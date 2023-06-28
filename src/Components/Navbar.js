@@ -1,6 +1,10 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { SiShopware } from "react-icons/si";
 import avatar from "../data/avatar.jpg";
+import avatar2 from "../data/avatar2.jpg"
+// import avatar3 from "../data/avatar3.jpg"
+// import avatar4 from "../data/avatar4.jpg"
+
 import { BiShoppingBag, BiPyramid, BiMessageRounded } from "react-icons/bi";
 import { MdOutlineCandlestickChart, MdStackedLineChart } from "react-icons/md";
 import {
@@ -10,6 +14,7 @@ import {
   BsKanban,
   BsFillBarChartFill,
   BsBarChartLine,
+  BsCurrencyDollar,
 } from "react-icons/bs";
 import { FcBusinessman } from "react-icons/fc";
 import { VscEditorLayout } from "react-icons/vsc";
@@ -57,7 +62,7 @@ export default function Navbar() {
             </div>
             <button
               type="button"
-              class="btn-close"
+              className="btn-close"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
@@ -148,44 +153,317 @@ export default function Navbar() {
             href="#offcanvasExample"
             aria-controls="offcanvasExample"
           >
-            <AiOutlineMenu className="" />
+            <AiOutlineMenu className="" size={20} />
           </a>
-<div className="d-flex gap-3">
-      <div
-        data-bs-toggle="tooltip"
-        data-bs-placement="bottom"
-        title="Cart"
-        style={{ height: "30px" }}
-        
-      >
-        <BsCart3  />
-      </div>
-      <div
-        data-bs-toggle="tooltip"
-        data-bs-placement="bottom"
-        title="Message"
-      >
-        <BiMessageRounded className="" />
-      </div>
-      <div
-        data-bs-toggle="tooltip"
-        data-bs-placement="bottom"
-        title="Notification"
-        
-      >
-        <AiOutlineBell className="" />
-      </div>
-      <button type="button" className="d-flex btn button-navbar " style={{width:'8.5rem',height:'2.5rem'}} data-bs-toggle="tooltip"
-        data-bs-placement="bottom"
-        title="Profile">
-      <img
-        src={avatar}
-        className="rounded-circle "
-        style={{ width: "25px" }}
-        alt="Avatar"
-      /><p className="text-secondary ">Hi, Michael</p>
-      </button>
-    </div>
+          <div className="d-flex gap-3">
+            <div
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Cart"
+              style={{ height: "30px" }}
+            >
+              <BsCart3 size={20} />
+            </div>
+            <div data-bs-toggle="modal" data-bs-target="#exampleModal2" >
+            <div
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Message"
+            >
+              <BiMessageRounded className="" size={20} />
+            </div>
+            </div>
+            <div
+              className="modal "
+              id="exampleModal2"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+              data-backdrop="false"
+            >
+              <div className="modal-dialog position-absolute end-0">
+                <div className="modal-content mt-4" style={{ width: "29rem" }}>
+                  <div className="modal-header border-0">
+                    <h1 className="modal-title fs-5" id="exampleModalLabel">
+                      Messages
+                    </h1>
+                    <button
+                      type="button"
+                      className="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div className="modal-body ">
+                    
+                    <button className="d-flex gap-3 button-navbar w-100" style={{ border:'none',borderRadius:'5px' }}>
+                      
+                        <div className="d-flex gap-3 ">
+                      <div className="">
+                        <img
+                          src={avatar2}
+                          alt=""
+                          className="rounded-circle"
+                          style={{ width: "60px" }}
+                        />
+                      </div>
+                      <div className="text-start mt-2">
+                        <b className="fs-5">Michael Robert</b>
+                        
+                        <p
+                          className="text-secondary"
+                          
+                        >
+                          info@shop.com
+                        </p>
+                      </div>
+                    </div>
+                    </button>
+                    <hr />
+                    <button className="d-flex gap-3 button-navbar w-100" style={{ border:'none',borderRadius:'5px' }}>
+                      <button
+                        className="btn mt-2"
+                        type="button"
+                        style={{ backgroundColor: "#e5fafb",border:'none' }}
+                      >
+                        <BsCurrencyDollar style={{ color: "03C9D7" }} />
+                      </button>
+                      <div className="">
+                        <b className="text-start" style={{ fontSize: "20px" }}>My Inbox</b>
+                        <p className="text-secondary">Messages & Emails</p>
+                      </div>
+                    </button>
+                    <hr />
+                    <button className="d-flex button-navbar w-100 gap-3" style={{ border:'none',borderRadius:'5px' }}>
+                      <button
+                        className="btn mt-2"
+                        type="button"
+                        style={{ backgroundColor: "#fec90f",border:'none' }}
+                      >
+                        <BsCurrencyDollar style={{ color: "white" }} />
+                      </button>
+                      <div className="">
+                        <b className="text-start" style={{ fontSize: "20px" }}>My Tasks</b>
+                        <p className="text-secondary">Todo and daily Task</p>
+                      </div>
+                    </button>
+                    <hr />
+                    <button className="btn btn-primary w-100">Logout</button>
+                    <div className="modal-footer border-0"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-bs-toggle="modal" data-bs-target="#exampleModal1" >
+            <div
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Notification"
+            >
+              <AiOutlineBell className="" size={20} />
+            </div>
+            </div>
+            <div
+              className="modal "
+              id="exampleModal1"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+              data-backdrop="false"
+            >
+              <div className="modal-dialog position-absolute end-0">
+                <div className="modal-content mt-4" style={{ width: "29rem" }}>
+                  <div className="modal-header border-0">
+                    <h1 className="modal-title fs-5" id="exampleModalLabel">
+                      User Profile
+                    </h1>
+                    <button
+                      type="button"
+                      className="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div className="modal-body ">
+                    <div className="d-flex gap-3 ">
+                      <div className="">
+                        <img
+                          src={avatar}
+                          alt=""
+                          className="rounded-circle"
+                          style={{ width: "100px" }}
+                        />
+                      </div>
+                      <div className="text-start mt-2">
+                        <b className="fs-5">Michael Robert</b>
+                        <p>Administrator</p>
+                        <p
+                          className="text-secondary"
+                          style={{ marginTop: "-1rem" }}
+                        >
+                          info@shop.com
+                        </p>
+                      </div>
+                    </div>
+                    <hr />
+                    <button className="d-flex gap-3 button-navbar w-100" style={{ border:'none',borderRadius:'5px' }}>
+                      <button
+                        className="btn mt-2"
+                        type="button"
+                        style={{ backgroundColor: "#e5fafb",border:'none' }}
+                      >
+                        <BsCurrencyDollar style={{ color: "03C9D7" }} />
+                      </button>
+                      <div className="">
+                        <b className="text-start" style={{ fontSize: "20px" }}>My Profile</b>
+                        <p className="text-secondary">Acccount Settings</p>
+                      </div>
+                    </button>
+                    <hr />
+                    <button className="d-flex gap-3 button-navbar w-100" style={{ border:'none',borderRadius:'5px' }}>
+                      <button
+                        className="btn mt-2"
+                        type="button"
+                        style={{ backgroundColor: "#e5fafb",border:'none' }}
+                      >
+                        <BsCurrencyDollar style={{ color: "03C9D7" }} />
+                      </button>
+                      <div className="">
+                        <b className="text-start" style={{ fontSize: "20px" }}>My Inbox</b>
+                        <p className="text-secondary">Messages & Emails</p>
+                      </div>
+                    </button>
+                    <hr />
+                    <button className="d-flex button-navbar w-100 gap-3" style={{ border:'none',borderRadius:'5px' }}>
+                      <button
+                        className="btn mt-2"
+                        type="button"
+                        style={{ backgroundColor: "#fec90f",border:'none' }}
+                      >
+                        <BsCurrencyDollar style={{ color: "white" }} />
+                      </button>
+                      <div className="">
+                        <b className="text-start" style={{ fontSize: "20px" }}>My Tasks</b>
+                        <p className="text-secondary">Todo and daily Task</p>
+                      </div>
+                    </button>
+                    <hr />
+                    <button className="btn btn-primary w-100">Logout</button>
+                    <div className="modal-footer border-0"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-bs-toggle="modal" data-bs-target="#exampleModal" >
+              <button
+                type="button"
+                className="d-flex btn button-navbar "
+                style={{ width: "8.5rem", height: "2.5rem" }}
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Profile"
+              >
+                <img
+                  src={avatar}
+                  className="rounded-circle "
+                  style={{ width: "25px" }}
+                  alt="Avatar"
+                />
+                <p className="text-secondary position-relative">Hi, Michael</p>
+              </button>
+            </div>
+            <div
+              className="modal "
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+              data-backdrop="false"
+            >
+              <div className="modal-dialog position-absolute end-0">
+                <div className="modal-content mt-4" style={{ width: "29rem" }}>
+                  <div className="modal-header border-0">
+                    <h1 className="modal-title fs-5" id="exampleModalLabel">
+                      User Profile
+                    </h1>
+                    <button
+                      type="button"
+                      className="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div className="modal-body ">
+                    <div className="d-flex gap-3 ">
+                      <div className="">
+                        <img
+                          src={avatar}
+                          alt=""
+                          className="rounded-circle"
+                          style={{ width: "100px" }}
+                        />
+                      </div>
+                      <div className="text-start mt-2">
+                        <b className="fs-5">Michael Robert</b>
+                        <p>Administrator</p>
+                        <p
+                          className="text-secondary"
+                          style={{ marginTop: "-1rem" }}
+                        >
+                          info@shop.com
+                        </p>
+                      </div>
+                    </div>
+                    <hr />
+                    <button className="d-flex gap-3 button-navbar w-100" style={{ border:'none',borderRadius:'5px' }}>
+                      <button
+                        className="btn mt-2"
+                        type="button"
+                        style={{ backgroundColor: "#e5fafb",border:'none' }}
+                      >
+                        <BsCurrencyDollar style={{ color: "03C9D7" }} />
+                      </button>
+                      <div className="">
+                        <b className="text-start" style={{ fontSize: "20px" }}>My Profile</b>
+                        <p className="text-secondary">Acccount Settings</p>
+                      </div>
+                    </button>
+                    <hr />
+                    <button className="d-flex gap-3 button-navbar w-100" style={{ border:'none',borderRadius:'5px' }}>
+                      <button
+                        className="btn mt-2"
+                        type="button"
+                        style={{ backgroundColor: "#e5fafb",border:'none' }}
+                      >
+                        <BsCurrencyDollar style={{ color: "03C9D7" }} />
+                      </button>
+                      <div className="">
+                        <b className="text-start" style={{ fontSize: "20px" }}>My Inbox</b>
+                        <p className="text-secondary">Messages & Emails</p>
+                      </div>
+                    </button>
+                    <hr />
+                    <button className="d-flex button-navbar w-100 gap-3" style={{ border:'none',borderRadius:'5px' }}>
+                      <button
+                        className="btn mt-2"
+                        type="button"
+                        style={{ backgroundColor: "#fec90f",border:'none' }}
+                      >
+                        <BsCurrencyDollar style={{ color: "white" }} />
+                      </button>
+                      <div className="">
+                        <b className="text-start" style={{ fontSize: "20px" }}>My Tasks</b>
+                        <p className="text-secondary">Todo and daily Task</p>
+                      </div>
+                    </button>
+                    <hr />
+                    <button className="btn btn-primary w-100">Logout</button>
+                    <div className="modal-footer border-0"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
