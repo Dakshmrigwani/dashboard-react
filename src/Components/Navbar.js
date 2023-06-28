@@ -19,6 +19,7 @@ import {
   BsFillBarChartFill,
   BsBarChartLine,
   BsCurrencyDollar,
+  BsCurrencyRupee,
 } from "react-icons/bs";
 import { FcBusinessman } from "react-icons/fc";
 import { VscEditorLayout } from "react-icons/vsc";
@@ -194,11 +195,29 @@ export default function Navbar() {
               <div className="offcanvas-body">
                 <div className="">
                   <div className="row">
-                    <div className="col">
-                      <img src={Product4} alt="" className="rounded-circle" style={{width:"30px"}} />
+                    <div className="col-4">
+                      <img
+                        src={Product4}
+                        alt=""
+                        className=""
+                        style={{ width: "110px", borderRadius: "10px" }}
+                      />
                     </div>
-                    <div className="col">
-                      <b>Butter Scotch ice cream</b>
+                    <div className="col-8">
+                      <div className="d-flex flex-column w-100 text-start">
+                        <b className="">Nike Shoe</b>
+                        <p className="text-secondary">Milk Product</p>
+                        <span className="" style={{ margintop: "-10px" }}>
+                          <p className="text-decoration-line-through d-inline">
+                            <BsCurrencyRupee className="mb-1" /> 500
+                          </p>
+
+                          <p className="d-inline ms-2">
+                            <BsCurrencyRupee className="mb-1" />
+                            300
+                          </p>
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
