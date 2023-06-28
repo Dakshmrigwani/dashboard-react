@@ -223,11 +223,8 @@ export default function Navbar() {
                       </div>
                       <div className="">
                         <b className="fs-6">Michael Robert</b>
-                        <p
-                          style={{ marginTop: "-5rem" }}
-                          style={{ marginTop: "-5rem" }}
-                        s
-                          tyle={{margin
+                        <p style={{ marginTop: "-5rem" }}>
+                          Adminismrrton Top:'-5rem'}}>Adminismrrton
                         Top:'-5rem'}}>Administrator</p>
                         <p
                           className="text-secondary"
