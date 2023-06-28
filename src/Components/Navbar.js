@@ -206,6 +206,150 @@ export default function Navbar() {
                     <div className="col-8">
                       <div className="d-flex flex-column w-100 text-start">
                         <b className="">Nike Shoe</b>
+                        <p className="text-secondary">Foot Product</p>
+                        <span className="" style={{ margintop: "-10px" }}>
+                          <p className="text-decoration-line-through d-inline">
+                            <BsCurrencyRupee className="mb-1" /> 500
+                          </p>
+
+                          <p className="d-inline ms-2">
+                            <BsCurrencyRupee className="mb-1" />
+                            300
+                          </p>
+                          <span className="ms-2">
+                            <button
+                              className="btn d-inline btn-primary"
+                              type="button"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="text"
+                              className="d-inline py-1"
+                              style={{ width: "2rem" }}
+                            />
+                            <button
+                              className="btn d-inline btn-primary"
+                              type="button"
+                            >
+                              +
+                            </button>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div className="">
+                  <div className="row">
+                    <div className="col-4">
+                      <img
+                        src={Product5}
+                        alt=""
+                        className=""
+                        style={{ width: "110px", borderRadius: "10px" }}
+                      />
+                    </div>
+                    <div className="col-8">
+                      <div className="d-flex flex-column w-100 text-start">
+                        <b className="">Strawberry juice</b>
+                        <p className="text-secondary">drink Product</p>
+                        <span className="" style={{ margintop: "-10px" }}>
+                          <p className="text-decoration-line-through d-inline">
+                            <BsCurrencyRupee className="mb-1" /> 500
+                          </p>
+
+                          <p className="d-inline ms-2">
+                            <BsCurrencyRupee className="mb-1" />
+                            300
+                          </p>
+                          <span className="ms-2">
+                            <button
+                              className="btn d-inline btn-primary"
+                              type="button"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="text"
+                              className="d-inline py-1"
+                              style={{ width: "2rem" }}
+                            />
+                            <button
+                              className="btn d-inline btn-primary"
+                              type="button"
+                            >
+                              +
+                            </button>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div className="">
+                  <div className="row">
+                    <div className="col-4">
+                      <img
+                        src={Product6}
+                        alt=""
+                        className=""
+                        style={{ width: "110px", borderRadius: "10px" }}
+                      />
+                    </div>
+                    <div className="col-8">
+                      <div className="d-flex flex-column w-100 text-start">
+                        <b className="">Fresh Tomato</b>
+                        <p className="text-secondary">Veg Product</p>
+                        <span className="" style={{ margintop: "-10px" }}>
+                          <p className="text-decoration-line-through d-inline">
+                            <BsCurrencyRupee className="mb-1" /> 500
+                          </p>
+
+                          <p className="d-inline ms-2">
+                            <BsCurrencyRupee className="mb-1" />
+                            300
+                          </p>
+                          <span className="ms-2">
+                            <button
+                              className="btn d-inline btn-primary"
+                              type="button"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="text"
+                              className="d-inline py-1"
+                              style={{ width: "2rem" }}
+                            />
+                            <button
+                              className="btn d-inline btn-primary"
+                              type="button"
+                            >
+                              +
+                            </button>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div className="">
+                  <div className="row">
+                    <div className="col-4">
+                      <img
+                        src={Product7}
+                        alt=""
+                        className=""
+                        style={{ width: "110px", borderRadius: "10px" }}
+                      />
+                    </div>
+                    <div className="col-8">
+                      <div className="d-flex flex-column w-100 text-start">
+                        <b className="">butterScotch ice cream</b>
                         <p className="text-secondary">Milk Product</p>
                         <span className="" style={{ margintop: "-10px" }}>
                           <p className="text-decoration-line-through d-inline">
@@ -216,11 +360,52 @@ export default function Navbar() {
                             <BsCurrencyRupee className="mb-1" />
                             300
                           </p>
+                          <span className="ms-2">
+                            <button
+                              className="btn d-inline btn-primary"
+                              type="button"
+                            >
+                              -
+                            </button>
+                            <input
+                              type="text"
+                              className="d-inline py-1"
+                              style={{ width: "2rem" }}
+                            />
+                            <button
+                              className="btn d-inline btn-primary"
+                              type="button"
+                            >
+                              +
+                            </button>
+                          </span>
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
+                <hr />
+                <div className="row">
+                  <div className="col">
+                    <p className="text-start">SubTotal</p>
+                    <p className="text-start">Tax</p>
+                    <p className="text-start">Total</p>
+                  </div>
+                  <div className="col">
+                    <p className="text-end">
+                      <BsCurrencyRupee className="mb-1" /> 2000
+                    </p>
+                    <p className="text-end">
+                      <BsCurrencyRupee className="mb-1" /> 100
+                    </p>
+                    <p className="text-end">
+                      <BsCurrencyRupee className="mb-1" /> 2100
+                    </p>
+                  </div>
+                </div>
+                <button className="btn btn-primary w-100" type="button">
+                  Place order
+                </button>
               </div>
             </div>
             <div data-bs-toggle="modal" data-bs-target="#exampleModal2">
