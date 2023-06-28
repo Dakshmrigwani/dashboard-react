@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { SiShopware } from "react-icons/si";
 import avatar from "../data/avatar.jpg";
 import { BiShoppingBag, BiPyramid, BiMessageRounded } from "react-icons/bi";
@@ -150,42 +150,110 @@ export default function Navbar() {
           >
             <AiOutlineMenu className="" />
           </a>
-<div className="d-flex gap-3">
-      <div
-        data-bs-toggle="tooltip"
-        data-bs-placement="bottom"
-        title="Cart"
-        style={{ height: "30px" }}
-        
-      >
-        <BsCart3  />
-      </div>
-      <div
-        data-bs-toggle="tooltip"
-        data-bs-placement="bottom"
-        title="Message"
-      >
-        <BiMessageRounded className="" />
-      </div>
-      <div
-        data-bs-toggle="tooltip"
-        data-bs-placement="bottom"
-        title="Notification"
-        
-      >
-        <AiOutlineBell className="" />
-      </div>
-      <button type="button" className="d-flex btn button-navbar " style={{width:'8.5rem',height:'2.5rem'}} data-bs-toggle="tooltip"
-        data-bs-placement="bottom"
-        title="Profile">
-      <img
-        src={avatar}
-        className="rounded-circle "
-        style={{ width: "25px" }}
-        alt="Avatar"
-      /><p className="text-secondary ">Hi, Michael</p>
-      </button>
-    </div>
+          <div className="d-flex gap-3">
+            <div
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Cart"
+              style={{ height: "30px" }}
+            >
+              <BsCart3 />
+            </div>
+            <div
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Message"
+            >
+              <BiMessageRounded className="" />
+            </div>
+            <div
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Notification"
+            >
+              <AiOutlineBell className="" />
+            </div>
+            <div data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <button
+                type="button"
+                className="d-flex btn button-navbar "
+                style={{ width: "8.5rem", height: "2.5rem" }}
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Profile"
+              >
+                <img
+                  src={avatar}
+                  className="rounded-circle "
+                  style={{ width: "25px" }}
+                  alt="Avatar"
+                />
+                <p className="text-secondary ">Hi, Michael</p>
+              </button>
+            </div>
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content" style={{ width: "29rem" }}>
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      User Profile
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div className="d-flex">
+                      <div className="">
+                        <img
+                          src={avatar}
+                          alt=""
+                          className="rounded-circle"
+                          style={{ width: "100px" }}
+                        />
+                      </div>
+                      <div className="">
+                        <b className="fs-6">Michael Robert</b>
+                        <p
+                          style={{ marginTop: "-5rem" }}
+                          style={{ marginTop: "-5rem" }}
+                        s
+                          tyle={{margin
+                        Top:'-5rem'}}>Administrator</p>
+                        <p
+                          className="text-secondary"
+                          style={{ marginTop: "-18rem" }}
+                        >
+                          info@shop.com
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      Save changes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
