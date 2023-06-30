@@ -63,7 +63,6 @@ const options = {
   },
 };
 const dataPie = {
-  labels: ["Mon", "Tue", "Wed"],
   datasets: [
     {
       label: "Sales",
@@ -80,7 +79,7 @@ const dataBar = {
   labels: ["Mon", "Tue", "Wed", "Thu"],
   datasets: [
     {
-      label: "Sales Numbers",
+      label: ["budget", "expenses"],
       data: [3, 6, 9, 3.69],
       backgroundColor: ["aqua", "red", "blue", "green"],
       borderWidth: 1,
@@ -89,6 +88,11 @@ const dataBar = {
 };
 
 const optionsBar = {
+  plugins: {
+    legend: {
+      display: false, // Hide legend labels
+    },
+  },
   scales: {
     y: {
       beginAtZero: true,
@@ -268,17 +272,37 @@ export default function Body() {
               </div>
             </div>
           </div>
-          <div className="d-flex justify-content-center">
-            <div className="card" style={{ width: "30rem" }}>
-              <div className="card-body  border-0 row">
-                <div className="col d-flex flex-column justify-content-center align-items-center">
-                  <b>
-                    <BsCurrencyRupee /> 45,334
-                  </b>
-                  <p className="text-secondary">Yearly Sales</p>
+          <div className="row">
+            <div className="d-flex justify-content-center col">
+              <div className="card" style={{ width: "30rem" }}>
+                <div className="card-body  border-0 row">
+                  <div className="col d-flex flex-column justify-content-center align-items-center">
+                    <b>
+                      <BsCurrencyRupee /> 45,334
+                    </b>
+                    <p className="text-secondary">Yearly Sales</p>
+                  </div>
+                  <div className="col">
+                    <PieChart />
+                  </div>
                 </div>
-                <div className="col">
-                  <PieChart />
+              </div>
+            </div>
+            <div className="col">
+              <div className="d-flex justify-content-center col">
+                <div className="card" style={{ width: "30rem" }}>
+                  <h4 className="card-title-title">Earnings</h4>
+                  <div className="card-body  border-0 row">
+                    <div className="col d-flex flex-column justify-content-center align-items-center">
+                      <b>
+                        <BsCurrencyRupee /> 63,448.00
+                      </b>
+                      <p className="text-secondary">Yearly Sales</p>
+                    </div>
+                    <div className="col">
+                      <BarChart />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
