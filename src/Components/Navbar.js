@@ -33,6 +33,11 @@ import {
 } from "react-icons/ai";
 
 export default function Navbar() {
+  // const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
+
+  // const handleOffcanvasToggle = () => {
+  //   setIsOffcanvasOpen(!isOffcanvasOpen);
+  // };
   useEffect(() => {
     // Initialize tooltips
     const tooltipTriggerList = [].slice.call(
@@ -44,7 +49,7 @@ export default function Navbar() {
   }, []);
   return (
     <>
-      <div className="container-fluid">
+      <div className="container">
         <div
           className="offcanvas offcanvas-start"
           tabindex="-1"
@@ -151,6 +156,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+
         <div className="d-flex justify-content-between mt-2">
           <a
             className=""
@@ -708,7 +714,10 @@ export default function Navbar() {
                       <button
                         className="btn mt-2"
                         type="button"
-                        style={{ backgroundColor: "#e5fafb", border: "none" }}
+                        style={{
+                          backgroundColor: "#e5fafb",
+                          border: "none",
+                        }}
                       >
                         <BsCurrencyDollar style={{ color: "03C9D7" }} />
                       </button>
@@ -727,7 +736,10 @@ export default function Navbar() {
                       <button
                         className="btn mt-2"
                         type="button"
-                        style={{ backgroundColor: "#e5fafb", border: "none" }}
+                        style={{
+                          backgroundColor: "#e5fafb",
+                          border: "none",
+                        }}
                       >
                         <BsCurrencyDollar style={{ color: "03C9D7" }} />
                       </button>
@@ -746,7 +758,10 @@ export default function Navbar() {
                       <button
                         className="btn mt-2"
                         type="button"
-                        style={{ backgroundColor: "#fec90f", border: "none" }}
+                        style={{
+                          backgroundColor: "#fec90f",
+                          border: "none",
+                        }}
                       >
                         <BsCurrencyDollar style={{ color: "white" }} />
                       </button>
