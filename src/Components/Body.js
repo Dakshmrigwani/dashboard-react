@@ -14,11 +14,13 @@ import {
   LinearScale,
   Tooltip,
   Legend,
+  ArcElement,
 } from "chart.js";
-import { Line, Bar } from "react-chartjs-2";
+import { Line, Bar, Pie } from "react-chartjs-2";
 
 ChartJS.register(
   LineElement,
+  ArcElement,
   BarElement,
   PointElement,
   CategoryScale,
@@ -60,28 +62,41 @@ const options = {
     },
   },
 };
+const dataPie = {
+  datasets: [
+    {
+      label: "Sales",
+      data: [3, 6, 9],
+      borderColor: "black",
+      backgroundColor: ["red", "aqua", "purple"],
+    },
+  ],
+};
+
+const optionsPie = {};
 
 const dataBar = {
   labels: ["Mon", "Tue", "Wed", "Thu"],
   datasets: [
     {
-      label: "Sales Numbers",
+      label: ["budget", "expenses"],
       data: [3, 6, 9, 3.69],
-      borderColor: "black",
       backgroundColor: ["aqua", "red", "blue", "green"],
       borderWidth: 1,
     },
   ],
 };
+
 const optionsBar = {
+  plugins: {
+    legend: {
+      display: false, // Hide legend labels
+    },
+  },
   scales: {
-    yAxes: [
-      {
-        ticks: {
-          beginAtZero: true,
-        },
-      },
-    ],
+    y: {
+      beginAtZero: true,
+    },
   },
 };
 
@@ -92,9 +107,19 @@ const LineChart = () => (
 );
 
 const BarChart = () => {
-  <>
-    <Bar data={dataBar} options={optionsBar} />
-  </>;
+  return (
+    <>
+      <Bar data={dataBar} options={optionsBar} />
+    </>
+  );
+};
+
+const PieChart = () => {
+  return (
+    <>
+      <Pie data={dataPie} options={optionsPie} />
+    </>
+  );
 };
 
 export default function Body() {
@@ -129,8 +154,8 @@ export default function Body() {
               </div>
             </div>
           </div>
-          <div className="d-flex gap-3 card-group row">
-            <div className="card border-0 col col-sm-6 col-md-6 col-lg-3">
+          <div className="d-flex gap-3 row  row-cols-md-6">
+            <div className="card border-0 col">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -138,7 +163,7 @@ export default function Body() {
                   style={{
                     backgroundColor: "#e5fafb",
                     height: "4rem",
-                    width: "5rem",
+                    width: "4rem",
                   }}
                 >
                   <BsFillPeopleFill style={{ color: "#03c9d7" }} />
@@ -150,7 +175,7 @@ export default function Body() {
                 <p className="text-secondary">Customers</p>
               </div>
             </div>
-            <div className="card border-0 col col-sm-6 col-md-6 col-lg-3">
+            <div className="card border-0 col">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -158,7 +183,7 @@ export default function Body() {
                   style={{
                     backgroundColor: "#FEC90F",
                     height: "4rem",
-                    width: "5rem",
+                    width: "4rem",
                   }}
                 >
                   <FiBox style={{ color: "white" }} />
@@ -170,7 +195,7 @@ export default function Body() {
                 <p className="text-secondary">Products</p>
               </div>
             </div>
-            <div className="card border-0 col col-sm-6 col-md-6 col-lg-3">
+            <div className="card border-0 col">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -178,7 +203,7 @@ export default function Body() {
                   style={{
                     backgroundColor: "#fff4e5",
                     height: "4rem",
-                    width: "5rem",
+                    width: "4rem",
                   }}
                 >
                   <BsBarChartLine style={{ color: "red" }} />
@@ -190,7 +215,7 @@ export default function Body() {
                 <p className="text-secondary">Sales</p>
               </div>
             </div>
-            <div className="card border-0 col col-sm-6 col-md-6 col-lg-3">
+            <div className="card border-0 col">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -198,7 +223,7 @@ export default function Body() {
                   style={{
                     backgroundColor: "#ebfaf2",
                     height: "4rem",
-                    width: "5rem",
+                    width: "4rem",
                   }}
                 >
                   <FiRefreshCcw style={{ color: "green" }} />
@@ -211,7 +236,7 @@ export default function Body() {
               </div>
             </div>
           </div>
-          <div className="card border-0" style={{ width: "60rem" }}>
+          <div className="card border-0">
             <div className="card-body">
               <div className="card-title row">
                 <div className="col text-start">
@@ -239,10 +264,45 @@ export default function Body() {
                   </div>
                 </div>
                 <div className="col col-sm-1 col-lg-1">
-                  <div className="vr"></div>
+                  <div className="vr h-100"></div>
                 </div>
                 <div className="col col-sm-12 col-lg-6">
                   <BarChart />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="d-flex justify-content-center col">
+              <div className="card" style={{ width: "30rem" }}>
+                <div className="card-body  border-0 row">
+                  <div className="col d-flex flex-column justify-content-center align-items-center">
+                    <b>
+                      <BsCurrencyRupee /> 45,334
+                    </b>
+                    <p className="text-secondary">Yearly Sales</p>
+                  </div>
+                  <div className="col">
+                    <PieChart />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="d-flex justify-content-center col">
+                <div className="card" style={{ width: "30rem" }}>
+                  <h4 className="card-title-title">Earnings</h4>
+                  <div className="card-body  border-0 row">
+                    <div className="col d-flex flex-column justify-content-center align-items-center">
+                      <b>
+                        <BsCurrencyRupee /> 63,448.00
+                      </b>
+                      <p className="text-secondary">Yearly Sales</p>
+                    </div>
+                    <div className="col">
+                      <BarChart />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
