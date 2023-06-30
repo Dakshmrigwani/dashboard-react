@@ -9,7 +9,7 @@ import { FiBox, FiRefreshCcw } from "react-icons/fi";
 export default function Body() {
   return (
     <>
-      <div className="container-fluid">
+      <div className="container">
         <div className="d-flex flex-column gap-2">
           <div className="card border-0" style={{ width: "20rem" }}>
             <div className="card-body">
@@ -117,6 +117,35 @@ export default function Body() {
                   <p className="text-danger">-12%</p>
                 </span>
                 <p className="text-secondary">Refunds</p>
+              </div>
+            </div>
+          </div>
+          <div className="card border-0" style={{ width: "40rem" }}>
+            <div className="card-body">
+              <div className="card-title row">
+                <div className="col text-start">
+                  <h4>Revenue Updates</h4>
+                </div>
+                <div className="col ">
+                  <ul className="d-flex justify-content-end gap-5">
+                    <li className="">Expenses</li>
+                    <li className="" style={{ color: "#4ade80" }}>
+                      Budget
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-5">
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                </div>
+                <div className="col-1">
+                  <div className="vr"></div>
+                </div>
+                <div className="col-6"></div>
               </div>
             </div>
           </div>

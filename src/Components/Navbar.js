@@ -33,11 +33,11 @@ import {
 } from "react-icons/ai";
 
 export default function Navbar() {
-  const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
+  // const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
 
-  const handleOffcanvasToggle = () => {
-    setIsOffcanvasOpen(!isOffcanvasOpen);
-  };
+  // const handleOffcanvasToggle = () => {
+  //   setIsOffcanvasOpen(!isOffcanvasOpen);
+  // };
   useEffect(() => {
     // Initialize tooltips
     const tooltipTriggerList = [].slice.call(
@@ -50,8 +50,8 @@ export default function Navbar() {
   return (
     <>
       <div className="container-fluid">
-        <div className="row">
-          <div className="col">
+       
+          
             <div
               className="offcanvas offcanvas-start"
               tabindex="-1"
@@ -158,8 +158,8 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col">
+         
+          
             <div className="d-flex justify-content-between mt-2">
               <a
                 className=""
@@ -807,8 +807,8 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+       
+      
     </>
   );
 }
