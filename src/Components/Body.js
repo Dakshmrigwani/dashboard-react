@@ -102,6 +102,39 @@ const optionsBar = {
   },
 };
 
+const optionsStacked = {
+  plugins: {
+    title: {
+      display: true,
+      text: "Chart.js Bar Chart - Stacked",
+    },
+  },
+  responsive: true,
+  scales: {
+    x: {
+      stacked: true,
+    },
+    y: {
+      stacked: true,
+    },
+  },
+};
+const dataStacked = {
+  labels: ["Mon", "Tue", "Wed", "Thu"],
+  datasets: [
+    {
+      label: "Dataset 1",
+      data: [34, 55, 78, 23, 87],
+      backgroundColor: "#4b5563",
+    },
+    {
+      label: "Dataset 2",
+      data: [45, 57, 34, 32, 24],
+      backgroundColor: "#4ade80",
+    },
+  ],
+};
+
 const LineChart = () => (
   <>
     <Line data={data} options={options} />
@@ -122,6 +155,9 @@ const PieChart = () => {
       <Pie data={dataPie} options={optionsPie} />
     </>
   );
+};
+const StackedBar = () => {
+  return <Bar data={dataStacked} options={optionsStacked} />;
 };
 
 export default function Body() {
@@ -270,7 +306,7 @@ export default function Body() {
                   <div className="vr h-100"></div>
                 </div>
                 <div className="col col-sm-12 col-lg-6">
-                  <BarChart />
+                  <StackedBar />
                 </div>
               </div>
             </div>
@@ -340,8 +376,8 @@ export default function Body() {
                           type="button"
                           style={{
                             backgroundColor: "#1E4DB7",
-                            height: "43px",
-                            width: "40px",
+                            // height: "43px",
+                            // width: "4rem",
                           }}
                         >
                           <BsCurrencyRupee />
@@ -366,8 +402,6 @@ export default function Body() {
                           type="button"
                           style={{
                             backgroundColor: "#1E4DB7",
-                            height: "43px",
-                            width: "40px",
                           }}
                         >
                           <BsShield className="text-white" />
@@ -392,8 +426,6 @@ export default function Body() {
                           type="button"
                           style={{
                             backgroundColor: "#FEC90F",
-                            height: "43px",
-                            width: "40px",
                           }}
                         >
                           <FiCreditCard style={{ color: "white" }} />
@@ -418,8 +450,6 @@ export default function Body() {
                           type="button"
                           style={{
                             backgroundColor: "#fff4e5",
-                            height: "43px",
-                            width: "40px",
                           }}
                         >
                           <TiTickOutline style={{ color: "red" }} />
@@ -444,8 +474,6 @@ export default function Body() {
                           type="button"
                           style={{
                             backgroundColor: "#1E4DB7",
-                            height: "43px",
-                            width: "40px",
                           }}
                         >
                           <BsCurrencyRupee />
@@ -465,19 +493,6 @@ export default function Body() {
                   <button type="button" className="btn btn-primary w-100">
                     +36 transaction more
                   </button>
-                  {/* <div className="row">
-                        
-                      </div>
-
-                      <div className="row">
-                       
-                      </div>
-                      <div className="row">
-                        
-                      </div>
-                      <div className="row">
-                       
-                      </div> */}
                 </div>
               </div>
             </div>
