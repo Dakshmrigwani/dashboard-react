@@ -156,8 +156,8 @@ export default function Body() {
               </div>
             </div>
           </div>
-          <div className="d-flex gap-3 row">
-            <div className="card border-0 col col-sm-6 col-md-4 col-lg-3">
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+            <div className="card border-0">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -171,13 +171,13 @@ export default function Body() {
                   <BsFillPeopleFill style={{ color: "#03c9d7" }} />
                 </button>
                 <span className="d-flex justify-content-center">
-                  <p className="card-text text-dark fs-4 ">39,354</p>
+                  <p className="card-text text-dark fs-4">39,354</p>
                   <p className="text-danger">-4%</p>
                 </span>
                 <p className="text-secondary">Customers</p>
               </div>
             </div>
-            <div className="card border-0 col col-sm-6 col-md-4 col-lg-3">
+            <div className="card border-0">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -191,13 +191,13 @@ export default function Body() {
                   <FiBox style={{ color: "white" }} />
                 </button>
                 <span className="d-flex justify-content-center">
-                  <p className="card-text text-dark fs-4 ">4,354</p>
+                  <p className="card-text text-dark fs-4">4,354</p>
                   <p className="text-success">+23%</p>
                 </span>
                 <p className="text-secondary">Products</p>
               </div>
             </div>
-            <div className="card border-0 col col-sm-6 col-md-4 col-lg-3">
+            <div className="card border-0">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -211,13 +211,13 @@ export default function Body() {
                   <BsBarChartLine style={{ color: "red" }} />
                 </button>
                 <span className="d-flex justify-content-center">
-                  <p className="card-text text-dark fs-4 ">4,864</p>
+                  <p className="card-text text-dark fs-4">4,864</p>
                   <p className="text-success">+41%</p>
                 </span>
                 <p className="text-secondary">Sales</p>
               </div>
             </div>
-            <div className="card border-0 col col-sm-6 col-md-4 col-lg-3">
+            <div className="card border-0">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -231,13 +231,14 @@ export default function Body() {
                   <FiRefreshCcw style={{ color: "green" }} />
                 </button>
                 <span className="d-flex justify-content-center">
-                  <p className="card-text text-dark fs-4 ">39,354</p>
+                  <p className="card-text text-dark fs-4">39,354</p>
                   <p className="text-danger">-12%</p>
                 </span>
                 <p className="text-secondary">Refunds</p>
               </div>
             </div>
           </div>
+
           <div className="card border-0">
             <div className="card-body">
               <div className="card-title row">
