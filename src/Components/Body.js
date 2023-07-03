@@ -154,8 +154,8 @@ export default function Body() {
               </div>
             </div>
           </div>
-          <div className="d-flex gap-3 row  row-cols-md-6">
-            <div className="card border-0 col">
+          <div className="d-flex gap-3 row">
+            <div className="card border-0 col col-sm-6 col-md-4 ">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -175,7 +175,7 @@ export default function Body() {
                 <p className="text-secondary">Customers</p>
               </div>
             </div>
-            <div className="card border-0 col">
+            <div className="card border-0 col col-sm-6 col-md-4 ">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -195,7 +195,7 @@ export default function Body() {
                 <p className="text-secondary">Products</p>
               </div>
             </div>
-            <div className="card border-0 col">
+            <div className="card border-0 col col-sm-6 col-md-4 ">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -215,7 +215,7 @@ export default function Body() {
                 <p className="text-secondary">Sales</p>
               </div>
             </div>
-            <div className="card border-0 col">
+            <div className="card border-0 col col-sm-6 col-md-4 ">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -290,7 +290,10 @@ export default function Body() {
             </div>
             <div className="col">
               <div className="d-flex justify-content-center col">
-                <div className="card" style={{ width: "30rem" }}>
+                <div
+                  className="card"
+                  style={{ width: "30rem", height: "20rem" }}
+                >
                   <h4 className="card-title-title">Earnings</h4>
                   <div className="card-body  border-0 row">
                     <div className="col d-flex flex-column justify-content-center align-items-center">
