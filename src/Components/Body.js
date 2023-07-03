@@ -136,6 +136,62 @@ const dataStacked = {
   ],
 };
 
+const optionsMultiLine = {
+  responsive: true,
+  interaction: {
+    mode: "index",
+    intersect: false,
+  },
+  stacked: false,
+  plugins: {
+    title: {
+      display: true,
+      text: "Chart.js Line Chart - Multi Axis",
+    },
+  },
+  scales: {
+    y: {
+      type: "linear",
+      display: true,
+      position: "left",
+    },
+    y1: {
+      type: "linear",
+      display: true,
+      position: "right",
+      grid: {
+        drawOnChartArea: false,
+      },
+    },
+  },
+};
+
+const dataMultiLine = {
+  labels: ["Mon", "Tue", "Wed", "Thu", "Fri"],
+  datasets: [
+    {
+      label: "Dataset 1",
+      data: [6, 45, 8, 78, 67],
+      borderColor: "rgb(255, 99, 132)",
+      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      yAxisID: "y",
+    },
+    {
+      label: "Dataset 2",
+      data: [34, 77, 78, 23, 52],
+      borderColor: "rgb(53, 162, 235)",
+      backgroundColor: "rgba(53, 162, 235, 0.5)",
+      yAxisID: "y1",
+    },
+    {
+      label: "Dataset 3",
+      data: [61, 25, 87, 28, 69],
+      borderColor: "rgb(255, 99, 132)",
+      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      yAxisID: "y",
+    },
+  ],
+};
 const LineChart = () => (
   <>
     <Line data={data} options={options} />
@@ -159,6 +215,9 @@ const PieChart = () => {
 };
 const StackedBar = () => {
   return <Bar data={dataStacked} options={optionsStacked} />;
+};
+const MultiLine = () => {
+  return <Line data={dataMultiLine} options={optionsMultiLine} />;
 };
 
 export default function Body() {
@@ -355,9 +414,9 @@ export default function Body() {
                 style={{ width: "30rem", height: "auto" }}
               >
                 <div className="card-body ">
-                  <div className="card-title row">
-                    <h4 className="col-7 text-dark">Recent Transaction</h4>
-                    <div className="col-5">
+                  <div className="card-title row row-cols-sm-2 row-cols-md-1">
+                    <h4 className="col-md-6  text-dark">Recent Transaction</h4>
+                    <div className="col-md-6 col-sm-12">
                       <select
                         className="form-select"
                         aria-label="Default select example"
@@ -496,12 +555,12 @@ export default function Body() {
               </div>
             </div>
           </div>
-          <div className="d-flex justify-content-center">
-            <div className="card border-0" style={{ width: "30rem" }}>
+          <div className="d-flex justify-content-center mt-4">
+            <div className="card border-0" style={{ width: "50rem" }}>
               <div className="card-body">
-                <div className="card-title row">
-                  <h4 className="col-7 text-dark">Sales Overview</h4>
-                  <div className="col-5">
+                <div className="card-title row row-cols-sm-2 row-cols-md-1">
+                  <h4 className="col-md-6 text-dark">Sales Overview</h4>
+                  <div className="col-md-6 col-12">
                     <select
                       className="form-select"
                       aria-label="Default select example"
@@ -513,19 +572,8 @@ export default function Body() {
                     </select>
                   </div>
                 </div>
-                <h6 className="card-subtitle mb-2 text-body-secondary">
-                  Card subtitle
-                </h6>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" className="card-link">
-                  Card link
-                </a>
-                <a href="#" className="card-link">
-                  Another link
-                </a>
+
+                <MultiLine />
               </div>
             </div>
           </div>
