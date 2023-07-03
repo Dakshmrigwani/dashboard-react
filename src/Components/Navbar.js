@@ -665,7 +665,7 @@ export default function Navbar() {
               </button>
             </div>
             <div
-              className="modal "
+              className="modal"
               id="exampleModal"
               tabindex="-1"
               aria-labelledby="exampleModalLabel"
@@ -673,7 +673,7 @@ export default function Navbar() {
               data-backdrop="false"
             >
               <div className="modal-dialog position-absolute end-0">
-                <div className="modal-content mt-4" style={{ width: "29rem" }}>
+                <div className="modal-content mt-4">
                   <div className="modal-header border-0">
                     <h1 className="modal-title fs-5" id="exampleModalLabel">
                       User Profile
