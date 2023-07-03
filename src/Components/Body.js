@@ -79,10 +79,11 @@ const optionsPie = {};
 
 const dataBar = {
   labels: ["Mon", "Tue", "Wed", "Thu"],
+  responsive: true,
   datasets: [
     {
       label: ["budget", "expenses"],
-      data: [3, 6, 9, 3.69],
+      data: [3, 6, 9, 4],
       backgroundColor: ["aqua", "red", "blue", "green"],
       borderWidth: 1,
     },
@@ -376,8 +377,6 @@ export default function Body() {
                           type="button"
                           style={{
                             backgroundColor: "#1E4DB7",
-                            // height: "43px",
-                            // width: "4rem",
                           }}
                         >
                           <BsCurrencyRupee />
@@ -494,6 +493,39 @@ export default function Body() {
                     +36 transaction more
                   </button>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div className="d-flex justify-content-center">
+            <div className="card border-0" style={{ width: "30rem" }}>
+              <div className="card-body">
+                <div className="card-title row">
+                  <h4 className="col-7 text-dark">Sales Overview</h4>
+                  <div className="col-5">
+                    <select
+                      className="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>March 2023</option>
+                      <option value="1">April 2023</option>
+                      <option value="2">May 2023</option>
+                      <option value="3">June 2023</option>
+                    </select>
+                  </div>
+                </div>
+                <h6 className="card-subtitle mb-2 text-body-secondary">
+                  Card subtitle
+                </h6>
+                <p className="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" className="card-link">
+                  Card link
+                </a>
+                <a href="#" className="card-link">
+                  Another link
+                </a>
               </div>
             </div>
           </div>
