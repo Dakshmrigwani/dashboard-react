@@ -155,7 +155,7 @@ export default function Body() {
             </div>
           </div>
           <div className="d-flex gap-3 row">
-            <div className="card border-0 col col-sm-6 col-md-4 ">
+            <div className="card border-0 col col-sm-6 col-md-4 col-lg-3">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -175,7 +175,7 @@ export default function Body() {
                 <p className="text-secondary">Customers</p>
               </div>
             </div>
-            <div className="card border-0 col col-sm-6 col-md-4 ">
+            <div className="card border-0 col col-sm-6 col-md-4 col-lg-3">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -195,7 +195,7 @@ export default function Body() {
                 <p className="text-secondary">Products</p>
               </div>
             </div>
-            <div className="card border-0 col col-sm-6 col-md-4 ">
+            <div className="card border-0 col col-sm-6 col-md-4 col-lg-3">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -215,7 +215,7 @@ export default function Body() {
                 <p className="text-secondary">Sales</p>
               </div>
             </div>
-            <div className="card border-0 col col-sm-6 col-md-4 ">
+            <div className="card border-0 col col-sm-6 col-md-4 col-lg-3">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -305,6 +305,30 @@ export default function Body() {
                     <div className="col">
                       <BarChart />
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="d-flex justify-content-center mt-5">
+              <div className="card" style={{ width: "30rem", height: "auto" }}>
+                <div className="card-body">
+                  <div className="card-title row">
+                    <h4 className="col-7 text-dark">Recent Transaction</h4>
+                    <div className="col-5">
+                      <select
+                        className="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>March 2023</option>
+                        <option value="1">April 2023</option>
+                        <option value="2">May 2023</option>
+                        <option value="3">June 2023</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col"></div>
+                    <div className="col"></div>
                   </div>
                 </div>
               </div>
