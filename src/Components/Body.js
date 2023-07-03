@@ -3,8 +3,10 @@ import {
   BsCurrencyRupee,
   BsFillPeopleFill,
   BsBarChartLine,
+  BsShield,
 } from "react-icons/bs";
-import { FiBox, FiRefreshCcw } from "react-icons/fi";
+import { TiTickOutline } from "react-icons/ti";
+import { FiBox, FiCreditCard, FiRefreshCcw } from "react-icons/fi";
 import {
   Chart as ChartJS,
   LineElement,
@@ -155,7 +157,7 @@ export default function Body() {
             </div>
           </div>
           <div className="d-flex gap-3 row">
-            <div className="card border-0 col col-sm-6 col-md-4 ">
+            <div className="card border-0 col col-sm-6 col-md-4 col-lg-3">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -175,7 +177,7 @@ export default function Body() {
                 <p className="text-secondary">Customers</p>
               </div>
             </div>
-            <div className="card border-0 col col-sm-6 col-md-4 ">
+            <div className="card border-0 col col-sm-6 col-md-4 col-lg-3">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -195,7 +197,7 @@ export default function Body() {
                 <p className="text-secondary">Products</p>
               </div>
             </div>
-            <div className="card border-0 col col-sm-6 col-md-4 ">
+            <div className="card border-0 col col-sm-6 col-md-4 col-lg-3">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -215,7 +217,7 @@ export default function Body() {
                 <p className="text-secondary">Sales</p>
               </div>
             </div>
-            <div className="card border-0 col col-sm-6 col-md-4 ">
+            <div className="card border-0 col col-sm-6 col-md-4 col-lg-3">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -306,6 +308,175 @@ export default function Body() {
                       <BarChart />
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div className="d-flex justify-content-center mt-5">
+              <div
+                className="card border-0"
+                style={{ width: "30rem", height: "auto" }}
+              >
+                <div className="card-body ">
+                  <div className="card-title row">
+                    <h4 className="col-7 text-dark">Recent Transaction</h4>
+                    <div className="col-5">
+                      <select
+                        className="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>March 2023</option>
+                        <option value="1">April 2023</option>
+                        <option value="2">May 2023</option>
+                        <option value="3">June 2023</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="row mt-3">
+                    <div className="col-1 d-flex flex-column gap-3">
+                      <div className="row">
+                        <button
+                          className="rounded-circle btn text-white "
+                          type="button"
+                          style={{
+                            backgroundColor: "#1E4DB7",
+                            height: "43px",
+                            width: "40px",
+                          }}
+                        >
+                          <BsCurrencyRupee />
+                        </button>
+                      </div>
+                    </div>
+                    <div className="col-7 text-start">
+                      <div className="d-flex flex-column">
+                        <b>Paypal Transfer</b>
+                        <p className="text-secondary">Money Added</p>
+                      </div>
+                    </div>
+                    <div className="col-4">
+                      <p className="text-success">+350</p>
+                    </div>
+                  </div>
+                  <div className="row mt-3">
+                    <div className="col-1 d-flex flex-column gap-3">
+                      <div className="row">
+                        <button
+                          className="rounded-circle btn"
+                          type="button"
+                          style={{
+                            backgroundColor: "#1E4DB7",
+                            height: "43px",
+                            width: "40px",
+                          }}
+                        >
+                          <BsShield className="text-white" />
+                        </button>
+                      </div>
+                    </div>
+                    <div className="col-7 text-start">
+                      <div className="d-flex flex-column">
+                        <b>Wallet</b>
+                        <p className="text-secondary">Bill Payment</p>
+                      </div>
+                    </div>
+                    <div className="col-4">
+                      <p className="text-danger">-560</p>
+                    </div>
+                  </div>
+                  <div className="row mt-3">
+                    <div className="col-1 d-flex flex-column gap-3">
+                      <div className="row">
+                        <button
+                          className="btn rounded-circle border-0"
+                          type="button"
+                          style={{
+                            backgroundColor: "#FEC90F",
+                            height: "43px",
+                            width: "40px",
+                          }}
+                        >
+                          <FiCreditCard style={{ color: "white" }} />
+                        </button>
+                      </div>
+                    </div>
+                    <div className="col-7 text-start">
+                      <div className="d-flex flex-column">
+                        <b>Credit Card</b>
+                        <p className="text-secondary">Money Reversed</p>
+                      </div>
+                    </div>
+                    <div className="col-4">
+                      <p className="text-success">+350</p>
+                    </div>
+                  </div>
+                  <div className="row mt-3">
+                    <div className="col-1 d-flex flex-column gap-3">
+                      <div className="row">
+                        <button
+                          className="btn rounded-circle border-0"
+                          type="button"
+                          style={{
+                            backgroundColor: "#fff4e5",
+                            height: "43px",
+                            width: "40px",
+                          }}
+                        >
+                          <TiTickOutline style={{ color: "red" }} />
+                        </button>
+                      </div>
+                    </div>
+                    <div className="col-7 text-start">
+                      <div className="d-flex flex-column">
+                        <b>Bank Transfer</b>
+                        <p className="text-secondary">Money Added</p>
+                      </div>
+                    </div>
+                    <div className="col-4">
+                      <p className="text-success">+350</p>
+                    </div>
+                  </div>
+                  <div className="row mt-3">
+                    <div className="col-1 d-flex flex-column gap-3">
+                      <div className="row">
+                        <button
+                          className="rounded-circle btn text-white "
+                          type="button"
+                          style={{
+                            backgroundColor: "#1E4DB7",
+                            height: "43px",
+                            width: "40px",
+                          }}
+                        >
+                          <BsCurrencyRupee />
+                        </button>
+                      </div>
+                    </div>
+                    <div className="col-7 text-start">
+                      <div className="d-flex flex-column">
+                        <b>Refund</b>
+                        <p className="text-secondary">Payment sent</p>
+                      </div>
+                    </div>
+                    <div className="col-4">
+                      <p className="text-danger">-50</p>
+                    </div>
+                  </div>
+                  <button type="button" className="btn btn-primary w-100">
+                    +36 transaction more
+                  </button>
+                  {/* <div className="row">
+                        
+                      </div>
+
+                      <div className="row">
+                       
+                      </div>
+                      <div className="row">
+                        
+                      </div>
+                      <div className="row">
+                       
+                      </div> */}
                 </div>
               </div>
             </div>
