@@ -3,6 +3,7 @@ import {
   BsCurrencyRupee,
   BsFillPeopleFill,
   BsBarChartLine,
+  BsShield,
 } from "react-icons/bs";
 import { FiBox, FiRefreshCcw } from "react-icons/fi";
 import {
@@ -327,7 +328,34 @@ export default function Body() {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col"></div>
+                    <div className="col d-flex flex-column gap-3">
+                      <div className="row">
+                        <button
+                          className="rounded-circle btn text-white "
+                          type="button"
+                          style={{
+                            backgroundColor: "#1E4DB7",
+                            height: "43px",
+                            width: "40px",
+                          }}
+                        >
+                          <BsCurrencyRupee />
+                        </button>
+                      </div>
+                      <div className="row">
+                        <button
+                          className="rounded-circle btn"
+                          type="button"
+                          style={{
+                            backgroundColor: "#1E4DB7",
+                            height: "43px",
+                            width: "40px",
+                          }}
+                        >
+                          <BsShield className="text-white" />
+                        </button>
+                      </div>
+                    </div>
                     <div className="col"></div>
                   </div>
                 </div>
