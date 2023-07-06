@@ -8,7 +8,7 @@ import ColorMapping from "./Pages/ColorMapping"
 import Customer from "./Pages/Customer"
 import Employees from "./Pages/Employees"
 import Financial from "./Pages/Financial"
-import Line from "./Pages/Line"
+import LineChart from "./Pages/Line"
 import Orders from "./Pages/orders"
 import Pie from "./Pages/Pie"
 import Pyramid from "./Pages/Pyramid"
@@ -27,7 +27,7 @@ export default function App() {
       <Route path="/Pages/Customer" element={<Customer />} />
       <Route path="/pages/Employees" element={<Employees />} />
       <Route path="/pages/Financial" element={<Financial />} />
-      <Route path="/pages/Line" element={<Line />} />
+      <Route path="/pages/Line" element={<LineChart />} />
       <Route path="/pages/Pie" element={<Pie />} />
       <Route path="/pages/orders" element={<Orders />} />
       <Route path="/pages/Pyramid" element={<Pyramid />} />

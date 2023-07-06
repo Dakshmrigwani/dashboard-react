@@ -121,45 +121,7 @@ export default function Navbar() {
                 <p>Customer</p>
               </Link>
             </div>
-            <div className="text-secondary text-start">
-              <h5>APPS</h5>
-            </div>
-            <div className="button-offcanvas">
-              <Link
-                to="/Pages/Calendar"
-                className="text-dark d-flex gap-3 my-1 p-1 ps-3 pt-2 underText"
-              >
-                <BsCalendarEvent />
-                <p>Calendar</p>
-              </Link>
-            </div>
-            <div className="button-offcanvas">
-              <Link
-                to="/Pages/Kanban"
-                className="text-dark d-flex gap-3 my-1 p-1 ps-3 pt-2 underText"
-              >
-                <BsKanban />
-                <p>Kanban</p>
-              </Link>
-            </div>
-            <div className="button-offcanvas">
-              <Link
-                to="/Pages/Editor"
-                className="text-dark d-flex gap-3 my-1 p-1 ps-3 pt-2 underText"
-              >
-                <VscEditorLayout />
-                <p>Editor</p>
-              </Link>
-            </div>
-            <div className="button-offcanvas">
-              <Link
-                to="/Pages/ColorPicker"
-                className="text-dark d-flex gap-3 my-1 p-1 ps-3 pt-2 underText"
-              >
-                <TbColorPicker />
-                <p>Color picker</p>
-              </Link>
-            </div>
+
             <div className="text-secondary text-start">
               <h5>Charts</h5>
             </div>

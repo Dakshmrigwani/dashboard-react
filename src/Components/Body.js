@@ -220,7 +220,7 @@ const MultiLine = () => {
   return <Line data={dataMultiLine} options={optionsMultiLine} />;
 };
 
-export default function Body() {
+function Body() {
   return (
     <>
       <div className="container">
@@ -582,3 +582,5 @@ export default function Body() {
     </>
   );
 }
+
+export default Body 
