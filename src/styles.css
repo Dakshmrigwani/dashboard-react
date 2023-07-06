@@ -30,3 +30,6 @@
 .remaining-content.open {
   width: calc(100% - 70rem);
 }
+.underText{
+  text-decoration-line: none;
+}
