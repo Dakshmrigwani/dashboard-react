@@ -1,7 +1,10 @@
-import React from "react"
+import React from "react";
+import Navbar from "../Components/Navbar";
 
-export default function Line(){
-    return(
-        <></>
-    )
+export default function Line() {
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 }

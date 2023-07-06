@@ -1,7 +1,9 @@
-import React from "react"
-
-export default function Bar(){
-    return(
-        <></>
-    )
+import React from "react";
+import Navbar from "../Components/Navbar";
+export default function Bar() {
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 }
