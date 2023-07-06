@@ -252,8 +252,8 @@ export default function Body() {
               </div>
             </div>
           </div>
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-            <div className="card border-0">
+          <div className="row ">
+            <div className="col-sm-6 col-md-4 col-lg-3 card border-0">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -273,7 +273,7 @@ export default function Body() {
                 <p className="text-secondary">Customers</p>
               </div>
             </div>
-            <div className="card border-0">
+            <div className="col-sm-6 col-md-4 col-lg-3 card border-0">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -293,7 +293,7 @@ export default function Body() {
                 <p className="text-secondary">Products</p>
               </div>
             </div>
-            <div className="card border-0">
+            <div className="col-sm-6 col-md-4 col-lg-3 card border-0">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -313,7 +313,7 @@ export default function Body() {
                 <p className="text-secondary">Sales</p>
               </div>
             </div>
-            <div className="card border-0">
+            <div className="col-sm-6 col-md-4 col-lg-3 card border-0">
               <div className="card-body">
                 <button
                   className="btn rounded-circle border-0"
@@ -414,9 +414,9 @@ export default function Body() {
                 style={{ width: "30rem", height: "auto" }}
               >
                 <div className="card-body ">
-                  <div className="card-title row row-cols-sm-2 row-cols-md-1">
-                    <h4 className="col-md-6  text-dark">Recent Transaction</h4>
-                    <div className="col-md-6 col-sm-12">
+                  <div className="card-title row ">
+                    <h4 className=" col-sm-6 col-md-12  text-dark">Recent Transaction</h4>
+                    <div className="col-sm-6 col-md-12">
                       <select
                         className="form-select"
                         aria-label="Default select example"
@@ -558,9 +558,9 @@ export default function Body() {
           <div className="d-flex justify-content-center mt-4">
             <div className="card border-0" style={{ width: "50rem" }}>
               <div className="card-body">
-                <div className="card-title row row-cols-sm-2 row-cols-md-1">
-                  <h4 className="col-md-6 text-dark">Sales Overview</h4>
-                  <div className="col-md-6 col-12">
+                <div className="card-title row">
+                  <h4 className="col-sm-6 col-md-12 text-dark">Sales Overview</h4>
+                  <div className="col-sm-6 col-md-12">
                     <select
                       className="form-select"
                       aria-label="Default select example"
